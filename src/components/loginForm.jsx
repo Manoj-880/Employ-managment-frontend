@@ -1,9 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "../App.css";
 import { Form, Button } from "react-bootstrap";
 import logo from "../assets/logo.png";
 
 const LoginForm = () => {
+  const [formData, setformData] = useState({
+    employId:'',
+    password:''
+  })
+  const loginSubmit = async(e) => {
+    e.preventDefault();
+    console.log(formData);
+  }
   return (
     <div className="col-8 form">
       <div className="brand">
@@ -16,20 +24,28 @@ const LoginForm = () => {
       </div>
       <div className="login-form">
         <h2 className="form-heading">Login</h2>
-        <Form className="login-form-content">
+        <Form onSubmit={loginSubmit} className="login-form-content">
           <input
             name="id"
             type="text"
+            value={formData.employId}
             placeholder="Employ ID"
+            onChange={(e) => {
+              setformData({ ...formData, employId: e.target.value });
+            }}
             className="login-input col-12"
           />
           <input
             name="password"
             type="password"
+            value={formData.password}
+            onChange={(e) => {
+              setformData({ ...formData, password: e.target.value });
+            }}
             placeholder="Password"
             className="login-input col-12"
           />
-          <Button variant="primary">Login</Button>
+          <Button type="submit" variant="primary">Login</Button>
         </Form>
       </div>
     </div>

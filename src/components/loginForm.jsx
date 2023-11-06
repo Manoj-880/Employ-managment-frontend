@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 import { Form, Button } from "react-bootstrap";
 import logo from "../assets/logo.png";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [formData, setformData] = useState({
@@ -13,7 +14,7 @@ const LoginForm = () => {
     console.log(formData);
   }
   return (
-    <div className="col-8 form">
+    <div className="col-4 form">
       <div className="brand">
         <div className="logo">
           <img src={logo} alt="Logo" className="col-12" />
@@ -45,7 +46,10 @@ const LoginForm = () => {
             placeholder="Password"
             className="login-input col-12"
           />
-          <Button type="submit" variant="primary">Login</Button>
+          <Link to={'/'} >
+            <Button type="submit" variant="primary" className="col-12 loginbtn">LOGIN</Button>
+          </Link>
+          
         </Form>
       </div>
     </div>

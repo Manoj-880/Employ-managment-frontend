@@ -4,18 +4,17 @@
   --white:#fff;
   --gray:#ccc;
 }
+
+/* --------- Login Page CSS ----------- */
+
 .loginpage{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
   gap: 2rem;
   background-color: var(--gray);
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  padding-left: 5rem;
-  padding-right: 15rem;
+  padding: 5rem;
 }
 .form{
   padding: 1rem;
@@ -66,3 +65,29 @@
   gap: 1rem;
   width: 100%;
 }
+
+/* ----------- Main Page CSS --------- */
+
+.mainpage{
+  background-color: var(--gray);
+  height: 100vh;
+}
+
+ /* ------Sidenav CSS------ */
+
+ .sideNav{
+  padding: 1.5rem;
+  background-color: var(--white);
+  height: 100vh;
+ }
+ .navBrand{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+ }
+ .navName{
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 700;
+ }

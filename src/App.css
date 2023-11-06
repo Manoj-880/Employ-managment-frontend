@@ -1,13 +1,13 @@
-:root{
-  --primary: #377DFF;
+:root {
+  --primary: #377dff;
   --text: #333;
-  --white:#fff;
-  --gray:#ccc;
+  --white: #fff;
+  --gray: #ccc;
 }
 
 /* --------- Login Page CSS ----------- */
 
-.loginpage{
+.loginpage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -16,26 +16,26 @@
   background-color: var(--gray);
   padding: 5rem;
 }
-.form{
+.form {
   padding: 1rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-.brand{
+.brand {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
 }
-.brand-name{
+.brand-name {
   color: var(--primary);
   font-weight: 700;
 }
-.logo{
+.logo {
   width: 20%;
 }
-.login-form{
+.login-form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -45,13 +45,14 @@
   padding: 2rem;
   gap: 1rem;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
-.form-heading{
+.form-heading {
   color: var(--primary);
   font-weight: 600;
 }
-.login-input{
+.login-input {
   border: none;
   background-color: var(--gray);
   font-weight: 500;
@@ -59,7 +60,7 @@
   padding: 0.5rem;
   border-radius: 5px;
 }
-.login-form-content{
+.login-form-content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -68,26 +69,45 @@
 
 /* ----------- Main Page CSS --------- */
 
-.mainpage{
+.mainpage {
   background-color: var(--gray);
   height: 100vh;
 }
 
- /* ------Sidenav CSS------ */
+/* ------Sidenav CSS------ */
 
- .sideNav{
-  padding: 1.5rem;
+.sideNav {
+  padding: 1.3rem;
   background-color: var(--white);
   height: 100vh;
- }
- .navBrand{
+}
+.navBrand {
   display: flex;
   gap: 20px;
   justify-content: center;
   align-items: center;
- }
- .navName{
+}
+.navName {
   color: var(--text);
   font-size: 1.2rem;
   font-weight: 700;
- }
+}
+.navlisthead{
+  font-size: 1.2rem;
+}
+.navitem {
+  display: flex;
+  gap: 10px;
+  padding-top: 0.8rem;
+  padding-left: 0.5rem;
+  /* margin-top: 0.2rem; */
+  border-radius: 10px;
+  cursor: pointer;
+}
+.navitem:hover{
+  background-color: #f0f0f0 !important;
+  color: #6c757d !important;
+}
+.navitem p{
+  font-size: 0.8rem;
+}

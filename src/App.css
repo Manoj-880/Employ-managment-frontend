@@ -3,6 +3,7 @@
   --text: #333;
   --white: #fff;
   --gray: #ccc;
+  --darkgrey: #777
 }
 
 /* --------- Login Page CSS ----------- */
@@ -72,6 +73,8 @@
 .mainpage {
   background-color: var(--gray);
   height: 100vh;
+  display: flex;
+  flex-direction: row;
 }
 
 /* ------Sidenav CSS------ */
@@ -92,7 +95,7 @@
   font-size: 1.2rem;
   font-weight: 700;
 }
-.navlisthead{
+.navlisthead {
   font-size: 1.2rem;
 }
 .navitem {
@@ -100,15 +103,34 @@
   gap: 10px;
   padding-top: 0.8rem;
   padding-left: 0.5rem;
-  /* margin-top: 0.2rem; */
   border-radius: 10px;
   cursor: pointer;
   text-decoration: none;
 }
-.navitem:hover{
+.hoveritem:hover {
   background-color: #f0f0f0 !important;
   color: #6c757d !important;
 }
-.navitem p{
+.navitem p {
   font-size: 0.8rem;
+}
+
+/* --------------------Dashboard CSS--------------- */
+
+.dashboard{
+  padding: 1.5rem;
+}
+.dash-greet{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.dash-greet h4{
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.dash-greet p{
+  font-size: 0.9rem;
+  color: var(--darkgrey);
 }

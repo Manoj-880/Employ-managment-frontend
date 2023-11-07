@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import navImage from "../assets/logo.png";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import MessageRoundedIcon from "@mui/icons-material/MessageRounded";
@@ -11,8 +11,10 @@ import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
 import WebAssetRoundedIcon from "@mui/icons-material/WebAssetRounded";
 import { Link } from "react-router-dom";
 
-const SideNav = () => {
-  const [navActive, setnavActive] = useState(1);
+const SideNav = ({
+  navActive,setnavActive
+}) => {
+  
   const navItems = [
     {
       id: 1,
@@ -84,7 +86,7 @@ const SideNav = () => {
 
   const navStyle = {
     active: "navitem col-12 bg-primary text-white",
-    inActive: "navitem col-12 bg-white text-muted",
+    inActive: "navitem col-12 bg-white text-muted hoveritem",
   };
 
   return (

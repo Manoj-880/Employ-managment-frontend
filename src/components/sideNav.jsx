@@ -9,6 +9,7 @@ import SettingsEthernetRoundedIcon from "@mui/icons-material/SettingsEthernetRou
 import AssignmentRoundedIcon from "@mui/icons-material/AssignmentRounded";
 import TuneRoundedIcon from "@mui/icons-material/TuneRounded";
 import WebAssetRoundedIcon from "@mui/icons-material/WebAssetRounded";
+import { Link } from "react-router-dom";
 
 const SideNav = () => {
   const [navActive, setnavActive] = useState(1);
@@ -17,56 +18,67 @@ const SideNav = () => {
       id: 1,
       icon: <DashboardIcon />,
       name: "Dashboard",
+      path: '/'
     },
     {
       id: 2,
       icon: <MessageRoundedIcon />,
       name: "Message",
+      path: '/message'
     },
     {
       id: 3,
       icon: <CalendarMonthRoundedIcon />,
       name: "Calender",
+      path: '/calender'
     },
     {
       id: 4,
       icon: <WorkRoundedIcon />,
       name: "Jobs",
+      path: '/jobs'
     },
     {
       id: 5,
       icon: <PeopleAltRoundedIcon />,
       name: "Candidates",
+      path: '/candidates'
     },
     {
       id: 6,
       icon: <SettingsEthernetRoundedIcon />,
       name: "Refer",
+      path: '/refer'
     },
     {
       id: 7,
       icon: <WebAssetRoundedIcon />,
       name: "Career Site",
+      path: '/careeers'
     },
     {
       id: 8,
       icon: <PeopleAltRoundedIcon />,
       name: "Employee",
+      path: '/employee'
     },
     {
       id: 9,
       icon: <SettingsEthernetRoundedIcon />,
       name: "Structure",
+      path: '/structure'
     },
     {
       id: 10,
       icon: <AssignmentRoundedIcon />,
       name: "Report",
+      path: '/report'
     },
     {
       id: 11,
       icon: <TuneRoundedIcon />,
       name: "Settings",
+      path: '/settings'
     },
   ];
 
@@ -89,7 +101,8 @@ const SideNav = () => {
         <div className="my-2">
           <h3 className="navlisthead">Menu</h3>
           {navItems.slice(0, 3).map((navItems) => (
-            <div
+            <Link
+              // to={navItems.path}
               key={navItems.id}
               className={
                 navItems.id === navActive ? navStyle.active : navStyle.inActive
@@ -100,13 +113,14 @@ const SideNav = () => {
                 style: { fontSize: "1.2rem" },
               })}
               <p>{navItems.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="my-2">
           <h3 className="navlisthead">Recruitment</h3>
           {navItems.slice(3, 7).map((navItems) => (
-            <div
+            <Link
+              // to={navItems.path}
               key={navItems.id}
               className={
                 navItems.id === navActive ? navStyle.active : navStyle.inActive
@@ -117,13 +131,14 @@ const SideNav = () => {
                 style: { fontSize: "1.2rem" },
               })}
               <p>{navItems.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
         <div className="my-2">
           <h3 className="navlisthead">Organization</h3>
           {navItems.slice(7, 11).map((navItems) => (
-            <div
+            <Link
+              // to={navItems.path}
               key={navItems.id}
               className={
                 navItems.id === navActive ? navStyle.active : navStyle.inActive
@@ -134,7 +149,7 @@ const SideNav = () => {
                 style: { fontSize: "1.2rem" },
               })}
               <p>{navItems.name}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

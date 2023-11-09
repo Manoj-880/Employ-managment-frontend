@@ -1,20 +1,24 @@
 import React from "react";
 import ReactApexChart from "react-apexcharts";
 
-const DashboardGraph = () => {
+const DashboardGraph = (
+  {
+    applications, shortlisted, rejected
+  }
+) => {
   const graphData = {
     series: [
       {
         name: "Applications",
-        data: [44, 55, 41, 67, 22, 43],
+        data: applications,
       },
       {
         name: "Shortlisted",
-        data: [13, 23, 20, 8, 13, 27],
+        data: shortlisted,
       },
       {
         name: "Rejected",
-        data: [11, 17, 15, 15, 21, 14],
+        data: rejected,
       }
     ],
     options: {
@@ -41,32 +45,41 @@ const DashboardGraph = () => {
           },
         },
       ],
+      dataLabels:{
+        enabled: false
+      },
+      colors:['#38cb89', '#ffa600', '#ff5630'],
       plotOptions: {
         bar: {
-            columnWidth: '10%',
+          columnWidth: '10%',
           horizontal: false,
-          borderRadius: 10,
+          borderRadius: 3,
           dataLabels: {
-            total: {
-              enabled: true,
-              style: {
-                fontSize: "13px",
-                fontWeight: 900,
-              },
-            },
+            enabled:false,
           },
         },
       },
       xaxis: {
-        type: "datetime",
         categories: [
-          "01/01/2011 GMT",
-          "01/02/2011 GMT",
-          "01/03/2011 GMT",
-          "01/04/2011 GMT",
-          "01/05/2011 GMT",
-          "01/06/2011 GMT",
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December",
         ],
+        labels:{
+          format:"MMM",
+        }
+      },
+      grid:{
+        show:false,
       },
       legend: {
         position: "top",
@@ -78,7 +91,7 @@ const DashboardGraph = () => {
   };
 
   return <div className="col-12">
-    <ReactApexChart options={graphData.options} series={graphData.series} type="bar" height={300} />
+    <ReactApexChart options={graphData.options} series={graphData.series} colors={graphData.colors} type="bar" height={300} />
   </div>;
 };
 

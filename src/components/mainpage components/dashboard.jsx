@@ -86,7 +86,7 @@ const Dashboard = () => {
           
         </div>
         <div className="dashboard-graph col-12">
-          <DashboardGraph/>
+          <DashboardGraph applications={total_applications} shortlisted={shortlisted} rejected={rejected}/>
         </div>
       </div>
       <div className="dashboard-profile col-3">profile</div>

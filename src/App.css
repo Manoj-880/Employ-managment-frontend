@@ -84,7 +84,7 @@
 /* ------Sidenav CSS------ */
 
 .sideNav {
-  padding: 1.3rem;
+  padding: 1rem;
   background-color: var(--white);
   height: 100vh;
 }
@@ -177,4 +177,10 @@
 }
 .dashboard-profile{
   background-color: #377dff;
+}
+.dashboard-graph{
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  flex: 1;
 }

@@ -2,6 +2,7 @@ import React from "react";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import "apexcharts/dist/apexcharts.css";
 import DashboardCardChart from "../dashboard_card_chart";
+import DashboardGraph from "../dashboardGraph";
 
 const Dashboard = () => {
   
@@ -83,6 +84,9 @@ const Dashboard = () => {
             </div> 
           ))}
           
+        </div>
+        <div className="dashboard-graph col-12">
+          <DashboardGraph/>
         </div>
       </div>
       <div className="dashboard-profile col-3">profile</div>

@@ -6,6 +6,10 @@
   --darkgrey: #777
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
 /* --------- Login Page CSS ----------- */
 
 .loginpage {
@@ -118,6 +122,9 @@
 /* --------------------Dashboard CSS--------------- */
 
 .dashboard{
+  display: flex;
+}
+.dashboard-main{
   padding: 1.5rem;
 }
 .dash-greet{
@@ -133,4 +140,32 @@
 .dash-greet p{
   font-size: 0.9rem;
   color: var(--darkgrey);
+}
+.dashboard-card-item{
+  background-color: var(--white);
+  padding: 0.8rem;
+  display: flex;
+}
+.dashboard-card-item p{
+  margin: 0;
+}
+.dashboard-card-title{
+  font-size: 0.8rem;
+}
+.dashboard-card-value{
+  font-size: 1.8rem;
+}
+.dashboard-card-content-increment{
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+.dashboard-card-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1rem;
+  width: 1rem;
+  background-color: var(--gray);
+  border-radius: 50%;
 }

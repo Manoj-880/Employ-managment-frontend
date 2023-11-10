@@ -60,7 +60,7 @@ const DashboardGraph = (
         bar: {
           columnWidth: '10%',
           horizontal: false,
-          borderRadius: 5,
+          borderRadius: 3,
           dataLabels: {
             enabled:false,
           },
@@ -103,7 +103,8 @@ const DashboardGraph = (
         align: "left",
         margin: 10,
         style: {
-          fontSize: "18px",
+          fontSize: "16px",
+          fontWeight: 600
         },
       },
     },

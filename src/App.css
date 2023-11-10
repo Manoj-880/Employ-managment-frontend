@@ -3,10 +3,10 @@
   --text: #333;
   --white: #fff;
   --gray: #ccc;
-  --darkgrey: #777
+  --darkgrey: #777;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -121,53 +121,66 @@
 
 /* --------------------Dashboard CSS--------------- */
 
-.dashboard{
+.dashboard {
   display: flex;
 }
-.dashboard-main{
-  padding: 2.5rem;
+.dashboard-main {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 1rem;
 }
-.dash-greet{
+.dash-greet {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
-.dash-greet h4{
+.dash-greet h4 {
   font-size: 1.2rem;
   color: var(--text);
 }
-.dash-greet p{
+.dash-greet p {
   font-size: 0.9rem;
   color: var(--darkgrey);
 }
-.dashboard-cards{
+.dashboard-cards {
   display: flex;
   justify-content: center;
-  margin: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   gap: 1rem;
 }
-.dashboard-card-item{
+.dashboard-card-item {
   background-color: var(--white);
   padding: 0.8rem;
   display: flex;
   border-radius: 10px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
-.dashboard-card-item p{
+.dashboard-card-item p {
   margin: 0;
 }
-.dashboard-card-title{
+.dashboard-card-title {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+.dashboard-card-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--darkgrey);
+}
+.dashboard-card-content-increment {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.3rem;
+}
+.dashboard-card-increment-value {
   font-size: 0.8rem;
 }
-.dashboard-card-value{
-  font-size: 1.8rem;
-}
-.dashboard-card-content-increment{
-  display: flex;
-  align-items: baseline;
-  gap: 0.5rem;
-}
-.dashboard-card-icon{
+.dashboard-card-icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,12 +188,13 @@
   width: 1rem;
   border-radius: 50%;
 }
-.dashboard-profile{
+.dashboard-profile {
   background-color: #377dff;
 }
-.dashboard-graph{
+.dashboard-graph {
   background-color: var(--white);
   border-radius: 10px;
   display: flex;
   flex: 1;
+  margin-top: 1rem;
 }

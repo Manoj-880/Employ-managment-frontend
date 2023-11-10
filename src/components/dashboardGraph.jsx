@@ -13,18 +13,27 @@ const DashboardGraph = (
         data: applications,
       },
       {
+        name: "",
+        data: [1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5],
+      },
+      {
         name: "Shortlisted",
         data: shortlisted,
       },
       {
+        name: "",
+        data: [1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5,1.5],
+      },
+      {
         name: "Rejected",
         data: rejected,
-      }
+      },
     ],
     options: {
       chart: {
         type: "bar",
         height: 350,
+
         stacked: true,
         toolbar: {
           show: false,
@@ -39,8 +48,6 @@ const DashboardGraph = (
           options: {
             legend: {
               position: "bottom",
-              offsetX: -10,
-              offsetY: 0,
             },
           },
         },
@@ -48,15 +55,16 @@ const DashboardGraph = (
       dataLabels:{
         enabled: false
       },
-      colors:['#38cb89', '#ffa600', '#ff5630'],
+      colors:['#38cb89','#fff', '#ffa600', '#fff', '#ff5630'],
       plotOptions: {
         bar: {
           columnWidth: '10%',
           horizontal: false,
-          borderRadius: 3,
+          borderRadius: 5,
           dataLabels: {
             enabled:false,
           },
+          barHeight:30,
         },
       },
       xaxis: {
@@ -83,9 +91,20 @@ const DashboardGraph = (
       },
       legend: {
         position: "top",
+        offsetY:-25,
       },
       fill: {
         opacity: 1,
+      },
+      title: {
+        text: "Statistics of active applicants",
+        offsetY:10,
+        offsetX: 10,
+        align: "left",
+        margin: 10,
+        style: {
+          fontSize: "18px",
+        },
       },
     },
   };

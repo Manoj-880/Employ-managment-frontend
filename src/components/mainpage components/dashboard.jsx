@@ -3,60 +3,88 @@ import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import "apexcharts/dist/apexcharts.css";
 import DashboardCardChart from "../dashboard_card_chart";
 import DashboardGraph from "../dashboardGraph";
-import m1 from '../../assets/avatars/m1.png';
-// import m2 from '../../assets/avatars/m2.png';
-// import f3 from '../../assets/avatars/f3.png'
+import m1 from "../../assets/avatars/m1.png";
+import m2 from '../../assets/avatars/m2.png';
+import f3 from '../../assets/avatars/f3.png'
 
 const Dashboard = () => {
-  
   const target = 1000;
-  const total_applications = [20,10,5,30,10,80,20,10,10,12,2,5];
-  const shortlisted = [2,5,6,1,10,5,3,10,12,8,6,3];
-  const rejected = [1,3,0,20,3,10,50,3,5,20,5,4];
+  const total_applications = [20, 10, 5, 30, 10, 80, 20, 10, 10, 12, 2, 5];
+  const shortlisted = [2, 5, 6, 1, 10, 5, 3, 10, 12, 8, 6, 3];
+  const rejected = [1, 3, 0, 20, 3, 10, 50, 3, 5, 20, 5, 4];
 
   var totalCount = 0;
-  total_applications.forEach((e)=>totalCount+=e);
-  const totalPercentage = Math.round((totalCount / target)*100);
-  const totalIncrement = Math.round((total_applications[1] / target)*100);
+  total_applications.forEach((e) => (totalCount += e));
+  const totalPercentage = Math.round((totalCount / target) * 100);
+  const totalIncrement = Math.round((total_applications[1] / target) * 100);
 
   var totalShortlisted = 0;
-  shortlisted.forEach((e) => totalShortlisted+=e);
-  const shortlistedPecentage = Math.round((totalShortlisted / totalCount)*100);
-  const shortlistedIncrement = Math.round((shortlisted[1] / totalCount)*100);
+  shortlisted.forEach((e) => (totalShortlisted += e));
+  const shortlistedPecentage = Math.round(
+    (totalShortlisted / totalCount) * 100
+  );
+  const shortlistedIncrement = Math.round((shortlisted[1] / totalCount) * 100);
 
   var totalRejected = 0;
-  rejected.forEach((e) => totalRejected+=e);
-  const rejectedPercentage = Math.round((totalRejected / totalCount)*100);
-  const rejecteedIncrement = Math.round((rejected[1] / totalCount)*100);
+  rejected.forEach((e) => (totalRejected += e));
+  const rejectedPercentage = Math.round((totalRejected / totalCount) * 100);
+  const rejecteedIncrement = Math.round((rejected[1] / totalCount) * 100);
 
   const dashboardCard = [
     {
-      id:1,
+      id: 1,
       name: "Total Applications",
-      count:totalCount,
+      count: totalCount,
       percentage: totalPercentage,
       increment: totalIncrement,
-      color:"#38cb89",
-      iconBg:'#EBF7F5',
+      color: "#38cb89",
+      iconBg: "#EBF7F5",
+    },
+    {
+      id: 2,
+      name: "Shortlisted Candidates",
+      count: totalShortlisted,
+      percentage: shortlistedPecentage,
+      increment: shortlistedIncrement,
+      color: "#FFA600",
+      iconBg: "#FFF8EE",
+    },
+    {
+      id: 3,
+      name: "Rejected Candidates",
+      count: totalRejected,
+      percentage: rejectedPercentage,
+      increment: rejecteedIncrement,
+      color: "#FF5630",
+      iconBg: "#FFF3EF",
+    },
+  ];
+
+  const activity = [
+    {
+      id:1,
+      avatar: m1,
+      description:'Micky has applied for job UI/UX Designer',
+      btnclass:'apply',
+      time: '10 min ago',
+      btncontent: 'Applying',
     },
     {
       id:2,
-      name: "Shortlisted Candidates",
-      count:totalShortlisted,
-      percentage: shortlistedPecentage,
-      increment: shortlistedIncrement,
-      color:"#FFA600",
-      iconBg:'#FFF8EE',
+      avatar: f3,
+      description:'Cassey created account as jobhunt',
+      btnclass:'signup',
+      time: '15 min ago',
+      btncontent: 'Sign Up',
     },
     {
       id:3,
-      name: "Rejected Candidates",
-      count:totalRejected,
-      percentage: rejectedPercentage,
-      increment: rejecteedIncrement,
-      color:"#FF5630",
-      iconBg:'#FFF3EF',
-    }
+      avatar: m2,
+      description:'Jhon has applied for job UI/UX Designer',
+      btnclass:'apply',
+      time: '1 day ago',
+      btncontent: 'Applying',
+    },
   ]
 
   return (
@@ -68,12 +96,21 @@ const Dashboard = () => {
         </div>
         <div className="dashboard-cards col-12">
           {dashboardCard.map((dashboardCard) => (
-            <div key={dashboardCard.id} className="dashboard-card-item col-xl-4 col-lg-3 col-md-6">
+            <div
+              key={dashboardCard.id}
+              className="dashboard-card-item col-xl-4 col-lg-3 col-md-6"
+            >
               <div className="dashboard-card-content col-7">
                 <p className="dashboard-card-title">{dashboardCard.name}</p>
                 <p className="dashboard-card-value">{dashboardCard.count}</p>
                 <div className="dashboard-card-content-increment">
-                  <div className="dashboard-card-icon" style={{backgroundColor:dashboardCard.iconBg, color:dashboardCard.color}}>
+                  <div
+                    className="dashboard-card-icon"
+                    style={{
+                      backgroundColor: dashboardCard.iconBg,
+                      color: dashboardCard.color,
+                    }}
+                  >
                     {React.cloneElement(<TrendingUpIcon />, {
                       style: { fontSize: "0.7rem" },
                     })}
@@ -82,34 +119,39 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="dashboard-card-chart col-5">
-                <DashboardCardChart value={dashboardCard.percentage} color={`${dashboardCard.color}`}/>
+                <DashboardCardChart
+                  value={dashboardCard.percentage}
+                  color={`${dashboardCard.color}`}
+                />
               </div>
-            </div> 
+            </div>
           ))}
-          
         </div>
         <div className="dashboard-graph col-12">
-          <DashboardGraph applications={total_applications} shortlisted={shortlisted} rejected={rejected}/>
+          <DashboardGraph
+            applications={total_applications}
+            shortlisted={shortlisted}
+            rejected={rejected}
+          />
         </div>
         <div className="dashboard-activity-meeting col-12">
           <div className="activity-feed col-7">
             <h4 className="card-head">Activity Feed</h4>
-          </div>
-          <div className="meeting col-5">
-            <div className="avatar col-2">
-              <img src={m1} alt="avatar" width={30}/>
+            {activity.map((activity) => (
+              <div key={activity.id} className="meeting col-12">
+              <div className="avatar col-1">
+                <img src={activity.avatar} alt="avatar" width={32} />
+              </div>
+              <div className="feed col-8">
+                <p className="description">
+                  {activity.description}
+                </p>
+                <p className="time">{activity.time}</p>
+              </div>
+              <div className={`feedstat ${activity.btnclass}`}>{activity.btncontent}</div>
             </div>
-            <div className="feed col-6">
-              <p className="description">
-                Username has applied for job UI/UX Designer
-              </p>
-              <p className="time">
-                10 min ago
-              </p>
-            </div>
-            <div className="feedstat">
-              Applying
-            </div>
+            ))}
+            
           </div>
         </div>
       </div>

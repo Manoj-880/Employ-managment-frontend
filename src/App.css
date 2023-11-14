@@ -198,3 +198,20 @@
   flex: 1;
   margin-top: 1rem;
 }
+.card-head {
+  font-size: 1.2rem;
+  color: var(--text);
+}
+.meeting {
+  display: flex;
+  background-color: aqua;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.avatar{
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px black solid;
+}

@@ -76,7 +76,7 @@
 
 .mainpage {
   background-color: var(--gray);
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: row;
 }
@@ -188,9 +188,6 @@
   width: 1rem;
   border-radius: 50%;
 }
-.dashboard-profile {
-  background-color: #377dff;
-}
 .dashboard-graph {
   background-color: var(--white);
   border-radius: 10px;
@@ -261,10 +258,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  margin-bottom: 1rem;
 } 
 .meeting-header .icon{
   cursor: pointer;
+  background-color: transparent;
   color: var(--primary);
   border: none;
 }
@@ -282,7 +281,7 @@
   padding-bottom: 0.2rem;
 }
 .meeting-calender .week{
-  font-size: 1.4rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #FFA600;
   margin-bottom: -0.1rem;

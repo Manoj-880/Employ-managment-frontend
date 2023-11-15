@@ -36,7 +36,7 @@ const ActivityFeed = () => {
             {activity.map((activity) => (
               <div key={activity.id} className="meeting col-12">
               <div className="avatar col-1">
-                <img src={activity.avatar} alt="avatar" width={32} />
+                <img src={activity.avatar} alt="avatar" width={50} />
               </div>
               <div className="feed col-8">
                 <p className="description">

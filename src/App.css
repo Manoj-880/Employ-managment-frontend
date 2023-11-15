@@ -165,7 +165,7 @@
 }
 .dashboard-card-title {
   font-size: 0.8rem;
-  color: var(--gray);
+  color: var(--darkgrey);
 }
 .dashboard-card-value {
   font-size: 1.5rem;
@@ -216,8 +216,8 @@
 .meeting {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  align-items: baseline;
   flex-wrap: nowrap;
 }
 .avatar {
@@ -267,4 +267,52 @@
   cursor: pointer;
   color: var(--primary);
   border: none;
+}
+.meeting-calender{
+  background-color: var(--white);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 10px;
+  margin: 0.2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+}
+.meeting-calender .week{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #FFA600;
+  margin-bottom: -0.1rem;
+}
+.meeting-calender .date{
+  margin-bottom: 0rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-left: 0.5rem;
+}
+.content .content-head{
+  margin-bottom: 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--text);
+}
+.content .content-time{
+  font-size: 0.9rem;
+  color: var(--darkgrey);
+}
+.meeting-menu{
+  background-color: var(--gray);
+  padding: 0.5rem;
+  margin-right: 0.1rem;
+  margin-left: 0.1rem;
+  border-radius: 10px;
+  color: var(--darkgrey);
+  cursor: pointer;
 }

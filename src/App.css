@@ -197,6 +197,7 @@
   display: flex;
   flex: 1;
   margin-top: 1rem;
+  padding-left: 1rem;
 }
 .card-head {
   font-size: 1.2rem;
@@ -204,8 +205,10 @@
 }
 .dashboard-activity-meeting{
   margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
 }
-.activity-feed{
+.activity-feed, .meeting-feed{
   background-color: var(--white);
   padding: 0.8rem;
   border-radius: 10px;
@@ -237,6 +240,7 @@
 .feed .time{
   font-size: 0.8rem;
   margin-top: -1rem;
+  color: var(--darkgrey);
 }
 .feedstat{
   font-size: 0.8rem;

@@ -315,3 +315,36 @@
   color: var(--darkgrey);
   cursor: pointer;
 }
+.dashboard-profile{
+  background-color: var(--white);
+  padding: 1rem;
+  padding-right: 1.5rem;
+}
+.profile-top-bar{
+  color: var(--darkgrey);
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  justify-content: flex-end;
+}
+.profile-top-bar .profile-avatar{
+  padding: 2px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+}
+.profilecard{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 2rem;
+}
+.profilecard h3{
+  color: var(--text);
+  font-weight: 700;
+}
+.profilecard p{
+  margin-top: -0.8rem;
+  color: var(--darkgrey);
+}

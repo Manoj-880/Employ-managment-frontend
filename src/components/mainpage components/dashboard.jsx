@@ -5,6 +5,10 @@ import DashboardCardChart from "../dashboard/dashboard_card_chart";
 import DashboardGraph from "../dashboard/dashboardGraph";
 import ActivityFeed from "../dashboard/activityFeed";
 import MeetingFeed from "../dashboard/meetingFeed";
+import ProfileTopBar from "../dashboard/profileTopBar";
+import ProfileCard from "../dashboard/profileCard";
+import ProfileMessages from "../dashboard/profileMessages";
+import RecentJobs from "../dashboard/recentJobs";
 
 const Dashboard = () => {
   const target = 1000;
@@ -115,7 +119,12 @@ const Dashboard = () => {
           </div>
         </div>
       </div>
-      <div className="dashboard-profile col-3">profile</div>
+      <div className="dashboard-profile col-3">
+        <ProfileTopBar/> 
+        <ProfileCard/>
+        <ProfileMessages/>
+        <RecentJobs/>
+      </div>
     </div>
   );
 };

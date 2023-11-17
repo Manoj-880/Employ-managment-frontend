@@ -31,20 +31,22 @@ const ActivityFeed = () => {
         },
       ]
   return (
-    <div>
+    <div className='activity-feed'>
         <h4 className="card-head">Activity Feed</h4>
             {activity.map((activity) => (
               <div key={activity.id} className="meeting col-12">
-              <div className="avatar col-1">
-                <img src={activity.avatar} alt="avatar" width={50} />
-              </div>
-              <div className="feed col-8">
-                <p className="description">
-                  {activity.description}
-                </p>
-                <p className="time">{activity.time}</p>
-              </div>
-              <div className={`feedstat ${activity.btnclass}`}>{activity.btncontent}</div>
+                <div className="avatar col-1">
+                  <img src={activity.avatar} alt="avatar" width={50} />
+                </div>
+                <div className="feed col-8">
+                  <p className="description">
+                    {activity.description}
+                  </p>
+                  <p className="time">{activity.time}</p>
+                </div>
+                <div className={`feedstat ${activity.btnclass}`}>
+                  {activity.btncontent}
+                </div>
             </div>
             ))}
     </div>

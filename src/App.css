@@ -76,7 +76,7 @@
 
 .mainpage {
   background-color: var(--gray);
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
 }
@@ -148,7 +148,7 @@
   justify-content: center;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 .dashboard-card-item {
   background-color: var(--white);
@@ -209,12 +209,15 @@
   background-color: var(--white);
   padding: 0.8rem;
   border-radius: 10px;
+  width: 96%;
 }
 .meeting {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
   flex-wrap: nowrap;
 }
 .avatar {
@@ -231,9 +234,13 @@
 }
 .feed{
   margin-top: 1rem;
+  margin-left: 1rem;
 }
 .feed .description{
   font-size: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .feed .time{
   font-size: 0.8rem;
@@ -316,6 +323,7 @@
   cursor: pointer;
 }
 .dashboard-profile{
+  height: 100vh;
   background-color: var(--white);
   padding: 1rem;
   padding-right: 1.5rem;
@@ -347,4 +355,53 @@
 .profilecard p{
   margin-top: -0.8rem;
   color: var(--darkgrey);
+}
+.messageCard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.2rem;
+}
+.message-details{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.2rem;
+}
+.message-name{
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--text);
+}
+.message-text{
+  margin-top: -0.8rem;
+  font-size: 0.8rem;
+  color: var(--darkgrey);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.recent-jobs{
+  margin-top: 1.5rem;
+}
+.jobs{
+  display: flex;
+  align-items: center;
+}
+.job-details{
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+.job-loc-time{
+  display: flex;
+  justify-content: space-between;
+  margin-top: -0.8rem;
+  font-size: 0.9rem;
+  color: var(--darkgrey);
+}
+.role-name{
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--text);
 }

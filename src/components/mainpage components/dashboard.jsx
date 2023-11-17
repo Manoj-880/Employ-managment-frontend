@@ -70,38 +70,40 @@ const Dashboard = () => {
           <h4>Dashboard</h4>
           <p>Hello, Thomas. Good Morning!</p>
         </div>
-        <div className="dashboard-cards col-12">
-          {dashboardCard.map((dashboardCard) => (
-            <div
-              key={dashboardCard.id}
-              className="dashboard-card-item col-xl-4 col-lg-3 col-md-6"
-            >
-              <div className="dashboard-card-content col-7">
-                <p className="dashboard-card-title">{dashboardCard.name}</p>
-                <p className="dashboard-card-value">{dashboardCard.count}</p>
-                <div className="dashboard-card-content-increment">
-                  <div
-                    className="dashboard-card-icon"
-                    style={{
-                      backgroundColor: dashboardCard.iconBg,
-                      color: dashboardCard.color,
-                    }}
-                  >
-                    {React.cloneElement(<TrendingUpIcon />, {
-                      style: { fontSize: "0.7rem" },
-                    })}
+        <div className="col-12">
+          <div className="dashboard-cards">
+            {dashboardCard.map((dashboardCard) => (
+              <div
+                key={dashboardCard.id}
+                className="dashboard-card-item col-xl-4 col-lg-3 col-md-6"
+              >
+                <div className="dashboard-card-content col-7">
+                  <p className="dashboard-card-title">{dashboardCard.name}</p>
+                  <p className="dashboard-card-value">{dashboardCard.count}</p>
+                  <div className="dashboard-card-content-increment">
+                    <div
+                      className="dashboard-card-icon"
+                      style={{
+                        backgroundColor: dashboardCard.iconBg,
+                        color: dashboardCard.color,
+                      }}
+                    >
+                      {React.cloneElement(<TrendingUpIcon />, {
+                        style: { fontSize: "0.7rem" },
+                      })}
+                    </div>
+                    <p className="dashboard-card-increment-value">{`+${dashboardCard.increment}% inc`}</p>
                   </div>
-                  <p className="dashboard-card-increment-value">{`+${dashboardCard.increment}% inc`}</p>
+                </div>
+                <div className="dashboard-card-chart col-5">
+                  <DashboardCardChart
+                    value={dashboardCard.percentage}
+                    color={`${dashboardCard.color}`}
+                  />
                 </div>
               </div>
-              <div className="dashboard-card-chart col-5">
-                <DashboardCardChart
-                  value={dashboardCard.percentage}
-                  color={`${dashboardCard.color}`}
-                />
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <div className="dashboard-graph col-12">
           <DashboardGraph
@@ -111,10 +113,10 @@ const Dashboard = () => {
           />
         </div>
         <div className="dashboard-activity-meeting col-12">
-          <div className="activity-feed col-7">
+          <div className="col-6">
             <ActivityFeed/>
           </div>
-          <div className="meeting-feed col-5">
+          <div className="col-6">
             <MeetingFeed/>
           </div>
         </div>

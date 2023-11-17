@@ -26,7 +26,7 @@ const MeetingFeed = () => {
     },
   ]
   return (
-    <div>
+    <div className='meeting-feed'>
       <div className="meeting-header col-12">
         <h4 className="card-head">Meetings</h4>
         <button className="icon">

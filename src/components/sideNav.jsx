@@ -56,7 +56,7 @@ const SideNav = ({
       id: 7,
       icon: <WebAssetRoundedIcon />,
       name: "Career Site",
-      path: '/careeers'
+      path: '/careers'
     },
     {
       id: 8,
@@ -104,7 +104,7 @@ const SideNav = ({
           <h3 className="navlisthead">Menu</h3>
           {navItems.slice(0, 3).map((navItems) => (
             <Link
-              // to={navItems.path}
+              to={navItems.path}
               key={navItems.id}
               className={
                 navItems.id === navActive ? navStyle.active : navStyle.inActive
@@ -122,7 +122,7 @@ const SideNav = ({
           <h3 className="navlisthead">Recruitment</h3>
           {navItems.slice(3, 7).map((navItems) => (
             <Link
-              // to={navItems.path}
+              to={navItems.path}
               key={navItems.id}
               className={
                 navItems.id === navActive ? navStyle.active : navStyle.inActive
@@ -140,7 +140,7 @@ const SideNav = ({
           <h3 className="navlisthead">Organization</h3>
           {navItems.slice(7, 11).map((navItems) => (
             <Link
-              // to={navItems.path}
+              to={navItems.path}
               key={navItems.id}
               className={
                 navItems.id === navActive ? navStyle.active : navStyle.inActive

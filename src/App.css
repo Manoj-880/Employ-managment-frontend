@@ -6,6 +6,10 @@
   --darkgrey: #777;
 }
 
+::-webkit-scrollbar{
+  width: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -79,6 +83,7 @@
   height: 100vh;
   display: flex;
   flex-direction: row;
+  overflow: hidden;
 }
 
 /* ------Sidenav CSS------ */
@@ -123,11 +128,15 @@
 
 .dashboard {
   display: flex;
+  background-color: var(--gray);
+  height: 100%;
 }
 .dashboard-main {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
   padding-top: 1rem;
+  padding-bottom: 2rem;
+  overflow: auto;
 }
 .dash-greet {
   display: flex;
@@ -327,6 +336,7 @@
   background-color: var(--white);
   padding: 1rem;
   padding-right: 1.5rem;
+  overflow: auto;
 }
 .profile-top-bar{
   color: var(--darkgrey);

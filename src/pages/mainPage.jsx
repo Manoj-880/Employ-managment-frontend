@@ -15,29 +15,12 @@ import Settings from '../components/mainpage components/settings'
 
 const MainPage = () => {
   const [navActive, setnavActive] = useState(1);
-  // const rendercomponent = () => {
-  //   switch(navActive) {
-  //     case 1: return <Dashboard/>;
-  //     case 2: return <Message/>;
-  //     case 3: return <Calender/>;
-  //     case 4: return <Jobs/>;
-  //     case 5: return <Candidates/>;
-  //     case 6: return <Refer/>;
-  //     case 7: return <Career/>;
-  //     case 8: return <Employee/>;
-  //     case 9: return <Structure/>;
-  //     case 10: return <Report/>;
-  //     case 11: return <Settings/>;
-  //     default: return <Dashboard/>;
-  //   }
-  // }
   return (
     <div className='mainpage col-12'>
         <div className='col-2'>
             <SideNav navActive={navActive} setnavActive={setnavActive}/>  
           </div>
           <div className='main-component col-10'>
-            {/* {rendercomponent()} */}
             <Routes>
               <Route path='/' element={<Dashboard/>}/>
               <Route path='/message' element={<Message/>}/>
